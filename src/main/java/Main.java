@@ -8,7 +8,6 @@ public class Main {
     public static void main(String[] args) {
         get("/", (req, res) -> "Hello World");
 
-
         System.out.println("Server running at http://0.0.0.0:4567");
     }
 }

@@ -1,11 +1,8 @@
 /**
  * Created by jamesaudretsch on 9/1/17.
  */
-import java.nio.file.Path;
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 
 public class Node{
     String data;

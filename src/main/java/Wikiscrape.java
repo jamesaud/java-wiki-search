@@ -34,6 +34,6 @@ public class Wikiscrape {
     }
 
     boolean linkIsValid(String link){
-        return link.startsWith(validLinkStart);
+        return link.startsWith(validLinkStart) && !link.contains(":");
     }
 }
