@@ -18,8 +18,9 @@ public class Wikiscrape {
     static final String validLinkStart = "/wiki/";
 
     //Returns a set of all links that appear in the body of a wikipedia page
-    public HashSet<String> search(String url) throws IOException {
-        Document doc = Jsoup.connect(url).get();
+    // wikiurl should be something like "/wiki/topic_of_choice"
+    public HashSet<String> search(String wikiurl) throws IOException {
+        Document doc = Jsoup.connect("https://en.wikipedia.org" + wikiurl).get();
         Elements linkElements = doc.select("#bodyContent a");
         HashSet<String> links = new HashSet<>();
 

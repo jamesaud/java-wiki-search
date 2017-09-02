@@ -17,7 +17,7 @@ public class Pathfinder {
 
     // BFS Traversal
     public List<Node> searchNextNeighbors() throws IOException{
-        HashSet<String> results = this.scrape.search("https://en.wikipedia.org" + this.currentNode.data);
+        HashSet<String> results = this.scrape.search(this.currentNode.data);
         List<Node> new_visits = new ArrayList<>();
 
         for (String url: results){
@@ -83,7 +83,7 @@ public class Pathfinder {
 
         List<Node> path = startNodePath.getPathToRoot();
         Collections.reverse(path);                // URL we started with should be first
-        path.remove(path.size() - 1); // Duplicated element bc the same url is in the end path
+        path.remove(path.size() - 1);      // Remove duplicated element bc the same url is in the end path
         path.addAll(endNodePath.getPathToRoot()); // Add the end path
 
         System.out.println(path);
