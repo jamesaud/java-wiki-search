@@ -13,11 +13,12 @@ import java.util.List;
  * Created by jamesaudretsch on 9/1/17.
  */
 
+// A class to scrape a wikipedia page
 public class Wikiscrape {
     static final String validLinkStart = "/wiki/";
 
+    //Returns a set of all links that appear in the body of a wikipedia page
     public HashSet<String> search(String url) throws IOException {
-
         Document doc = Jsoup.connect(url).get();
         Elements linkElements = doc.select("#bodyContent a");
         HashSet<String> links = new HashSet<>();

@@ -8,7 +8,7 @@ import java.util.*;
 public class Pathfinder {
     int maxQueueSize = 1000; // Maximum length to save memory
     Node currentNode;
-    Queue<Node> queue = new ArrayDeque<>();
+    Queue<Node> queue = new ArrayDeque<>();   // Queue for BFS traversal
     Wikiscrape scrape = new Wikiscrape();
 
     Pathfinder(String startUrl){
@@ -36,17 +36,20 @@ public class Pathfinder {
 
     public static void main(String[] args) throws IOException {
 
+        // Explore both sides with BFS
         Pathfinder pfStart = new Pathfinder("/wiki/Surgeon_general");
         Pathfinder pfEnd = new Pathfinder("/wiki/Philosophy");
 
+        // Visited nodes on each side of the search
         HashMap<String, Node> visitedOrigin = new HashMap<>();
         HashMap<String, Node> visitedDestination = new HashMap<>();
 
-        boolean flag = false;
-        boolean found = false;
-
+        // The final nodes ended on, used to create the path
         Node startNodePath = null;
         Node endNodePath = null;
+
+        boolean flag = false;
+        boolean found = false;
 
         while (true){
             if (flag){
