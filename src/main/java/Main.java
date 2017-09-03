@@ -1,6 +1,7 @@
 /**
  * Created by jamesaudretsch on 9/1/17.
  */
+import javax.swing.text.Document;
 import java.io.IOException;
 import java.net.URISyntaxException;
 import java.nio.charset.StandardCharsets;
@@ -42,7 +43,16 @@ public class Main {
 
     public static void main(String[] args) {
         get("/", (req, res) -> new RenderUtil().renderContent("index.html"));
-        get("/path", (req, res) -> Main.findPath("Human"), JsonUtil.json());
+
+        get("/path", (req, res) -> {
+            String start = req.queryParams("start");
+            return Main.findPath(start);
+        }, JsonUtil.json());
+
+        after("/path", (req, res) -> {
+            res.type("application/json");
+        });
+
         System.out.println("Server running at http://0.0.0.0:4567");
     }
 }

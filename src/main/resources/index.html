@@ -15,7 +15,7 @@
 
             <div class="row">
                 <div class="col-sm-8 col-sm-offset-2">
-                    <form>
+                    <form id="wiki-form">
                         <label class="control-label" for="wiki-input">Wikipedia Search Term</label>
                         <div class="input-group">
                             <input type="text" class="form-control" id="wiki-input" placeholder="Benedict_Cumberbatch">
@@ -26,18 +26,53 @@
                     </form>
                 </div>
             </div>
-
-                <a href="/path">Show me the path.</a>
+            
+            <div class="row">
+                <div class="col-sm-8 col-sm-offset-2">
+                    <div id="path"></div>
+                </div>
             </div>
+            
         </div>
 
 
-        <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 
         <script>
-        $(document).ready(
+        $(document).ready( function(){
+            
+            function get_path(start){
+                $("#path").html("Trying to find the path...");
 
-        )
+                $.get("/path?start=" + start, function(data){
+                    let result;
+                    
+                    if (data.errors){
+                        result = data.errors;
+                    }
+                    else{
+                        result = "";
+                        for (let i=0; i < data.result.length; i++){
+                            let link = data.result[i];
+                            if (i === data.result.length - 1){  // The last element, don't add an arrow
+                                result += `<div style="display: block;">${link}</div>`;
+                            }
+                            else{
+                                result += `<div style="display: block;">${link} -></div>`;
+                            }
+                        }
+                    }
+                    $("#path").html(result);
+                });}
+            
+
+            $("#wiki-form").submit(function(e){
+                console.log("Called function");
+                e.preventDefault();
+                let val = $('#wiki-input').val();
+                get_path(val);
+            });
+        });
         </script>
 
     </body>
