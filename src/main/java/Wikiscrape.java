@@ -3,37 +3,49 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
-import java.awt.*;
-import java.util.*;
-
 import java.io.IOException;
-import java.util.List;
-
 /**
  * Created by jamesaudretsch on 9/1/17.
  */
+import java.util.regex.Pattern;
 
 // A class to scrape a wikipedia page
-public class Wikiscrape {
+public final class Wikiscrape {
     static final String validLinkStart = "/wiki/";
+    static final String wikibaseurl = "https://en.wikipedia.org";
 
-    //Returns a set of all links that appear in the body of a wikipedia page
-    // wikiurl should be something like "/wiki/topic_of_choice"
-    public HashSet<String> search(String wikiurl) throws IOException {
-        Document doc = Jsoup.connect("https://en.wikipedia.org" + wikiurl).get();
-        Elements linkElements = doc.select("#bodyContent a");
-        HashSet<String> links = new HashSet<>();
+    public static String searchFirst(String wikiurl) throws IOException{
+        Document doc = Jsoup.connect(wikibaseurl + wikiurl).get();
+        Elements pElements = doc.select(".mw-parser-output > p");
+        String html = "";
+        for(Element elem: pElements){
+            html += elem.html();
+        }
+        String removedParens = html.replaceAll("[(][^)]*[)]", "");
+        doc = Jsoup.parse(removedParens);
 
-        for (Element link: linkElements){
-            String href = link.attr("href").trim();
-            if (this.linkIsValid(href)){
-                links.add(href);
+        String url = "";
+        String result = null;
+        for (Element elem: doc.select("a")){
+             url = elem.attr("href");
+             if (Wikiscrape.linkIsValid(url)){
+                result = url;
+                break;
             }
         }
-        return links;
+
+        return result;
     }
 
-    boolean linkIsValid(String link){
-        return link.startsWith(validLinkStart) && !link.contains(":");
+
+    static boolean linkIsValid(String link){
+        // Because all html in parens were removed, cases have to be taken out like "english_(disambiguation)"
+        // Links that contain ":" are to wikipedia Help center
+        return link.startsWith(validLinkStart) && !link.endsWith("_") && !link.contains(":");
+    }
+
+    public static void main(String[] args) throws IOException{
+        String result = Wikiscrape.searchFirst("/wiki/hello");
+        System.out.println(result);
     }
 }
