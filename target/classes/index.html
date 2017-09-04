@@ -45,6 +45,7 @@
                 $("#path").html("Trying to find the path...");
 
                 $.get("/path?start=" + start, function(data){
+                    console.log(data);
                     let result;
                     
                     if (data.errors){
@@ -52,14 +53,9 @@
                     }
                     else{
                         result = "";
-                        /*for(let link of data.result){
-                            result += `<div style="display: block;">${link} -></div>`;
-                        };*/
-                        console.log("HELLO");
                         for (let i=0; i < data.result.length; i++){
                             let link = data.result[i];
-                            console.log(link);
-                            if (i === data.result.length - 1){
+                            if (i === data.result.length - 1){  // The last element, don't add an arrow
                                 result += `<div style="display: block;">${link}</div>`;
                             }
                             else{
@@ -81,7 +77,4 @@
         </script>
 
     </body>
-
-
-
 </html>

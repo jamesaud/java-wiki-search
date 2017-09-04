@@ -38,6 +38,5 @@ public class Pathfinder {
     }
 
     public static void main(String[] args) throws IOException {
-        LinkedList<String> path = new Pathfinder("/wiki/Human").findPath("/wiki/Philosophy");
     }
 }
