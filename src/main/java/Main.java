@@ -39,7 +39,7 @@ public class Main {
                 response = JsonUtil.toJson(results);
             }
         } else {  // Find the path if not in DB
-            LinkedList<String> path = null;
+            List path = null;
             boolean error = false;
             try {
                 path = new Pathfinder(startUrl).findPath("/wiki/Philosophy"); // null means there's no path
