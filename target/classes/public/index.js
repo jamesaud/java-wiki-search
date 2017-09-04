@@ -4,7 +4,6 @@ $(document).ready( function(){
         $("#path").html("Trying to find the path...");
 
         $.get("/path?start=" + start, function(data){
-            console.log(data);
             let result;
 
             if (data.errors){

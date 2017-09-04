@@ -18,6 +18,7 @@ public class Main {
     static String findPath(String searchTerm){
             /* Finds a path from a wikipedia article to philosophy.
              * Stores the path in a DB,  caches response if possible. Try/Catch ensures that the code works even if the DB stops working.
+             * Should return a json formatted String
              * */
             String response;
             String startUrl = "/wiki/" + searchTerm;
@@ -31,19 +32,16 @@ public class Main {
             try {
                 result = DbUtil.get_from_db(searchTerm);
             }
-            catch (com.mongodb.MongoQueryException e){}  // If DB isn't working, ignore.
+            catch (Exception e){}  // If DB isn't working ignore
 
-            // Sucessfully got the path from the DB. Return the path.
-            if (result != null) {
+            if (result != null) { // Sucessfully got the path from the DB
                 try {
                     response = JsonUtil.fromJson(String.format("{%s: %s}", resultKeyword, result)).toString();
-                } catch (JSONException e) {
-                    // Failed to convert to a json.
+                } catch (JSONException e) {   // Failed to convert to json
                     results.put(errorKeyword, "Internal Server error (" + e.toString() + ")");
                     return JsonUtil.toJson(results);
                 }
-            } else {
-                // Find the path
+            } else {  // Find the path
                 LinkedList<String> path;
                 try {
                     path = new Pathfinder(startUrl).findPath("/wiki/Philosophy");
@@ -63,7 +61,7 @@ public class Main {
                     try {
                         DbUtil.insert_in_db(searchTerm, JsonUtil.toJson(path));
                     }
-                    catch (com.mongodb.MongoQueryException e){  } // Trouble connecting to DB, should just return the answer to the user
+                    catch (Exception e){  } // Trouble connecting to DB, should just return the answer to the user
                 }
 
                 response = JsonUtil.toJson(results);
