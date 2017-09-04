@@ -14,45 +14,65 @@ import java.util.*;
 import static spark.Spark.*;
 
 public class Main {
+    // Configure the json response 'keys'
     final static String resultKeyword = "result";
     final static String errorKeyword = "errors";
 
     static String findPath(String searchTerm){
-        // Make a json like object with HashMap for JsonUtil to convert
-        String response;
-        String startUrl = "/wiki/" + searchTerm;
-        HashMap<String, Object> results = new HashMap<>();
+            /* Finds a path from a wikipedia article to philosophy.
+             * Stores the path in a DB,  caches response if possible. Try/Catch ensures that the code works even if the DB stops working.
+             * */
+            String response;
+            String startUrl = "/wiki/" + searchTerm;
 
-        // Check if the record exists
-        String result = DbUtil.get_from_db(searchTerm);
-        if(result != null) {
+            // Make a json like object with HashMap for JsonUtil to convert
+            HashMap<String, Object> results = new HashMap<>();
+
+            String result = null;
+
+            // Try to get path from DB
             try {
-                response = JsonUtil.fromJson(String.format("{%s: %s}", resultKeyword, result)).toString();
-            } catch(JSONException e){
-                results.put(errorKeyword, "Internal Server error.");
-                response = JsonUtil.toJson(results);
+                result = DbUtil.get_from_db(searchTerm);
             }
-        }
+            catch (com.mongodb.MongoQueryException e){}  // If DB isn't working, ignore.
 
-        else {
-            try {
-                LinkedList<String> path = new Pathfinder(startUrl).findPath("/wiki/Philosophy");
-                Collections.reverse(path);
-                if (path == null) {
-                    results.put(errorKeyword, "Circular path, no way to reach Philosophy.");
+            // Sucessfully got the path from the DB. Return the path.
+            if (result != null) {
+                try {
+                    response = JsonUtil.fromJson(String.format("{%s: %s}", resultKeyword, result)).toString();
+                } catch (JSONException e) {
+                    // Failed to convert to a json.
+                    results.put(errorKeyword, "Internal Server error (" + e.toString() + ")");
+                    return JsonUtil.toJson(results);
                 }
-                else {
+            } else {
+                // Find the path
+                LinkedList<String> path;
+                try {
+                    path = new Pathfinder(startUrl).findPath("/wiki/Philosophy");
+                } catch (IOException e) {
+                    // Trouble connecting to Wikipedia
+                    results.put(errorKeyword, "Can't find path, error connecting to Wikipedia. Did you provide a proper term?"
+                            + "https://wikipedia.org/wiki/" + searchTerm + " should exist." + "(" + e.toString() + ")");
+                    return JsonUtil.toJson(results);
+                }
+
+                if (path == null) {
+                    results.put(errorKeyword, "No way to reach Philosophy");
+                } else {
+                    Collections.reverse(path);  // Put path into the correct order
                     results.put(resultKeyword, path);
                     // Insert into the DB
-                    DbUtil.insert_in_db(searchTerm, JsonUtil.toJson(path));
+                    try {
+                        DbUtil.insert_in_db(searchTerm, JsonUtil.toJson(path));
+                    }
+                    catch (com.mongodb.MongoQueryException e){  } // Trouble connecting to DB, should just return the answer to the user
                 }
-            } catch (IOException e) {
-                results.put(errorKeyword, "Can't find path, error connecting to Wikipedia. Did you provide a proper term? (" + e.toString() + ")");
-            }
-            response = JsonUtil.toJson(results);
-        }
 
-        return response;
+                response = JsonUtil.toJson(results);
+            }
+
+            return response;
     }
 
 

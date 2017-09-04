@@ -6,10 +6,12 @@ import java.util.Map;
 final public class Config {
     // Set configuration from environment
     final static Map<String, String> env = System.getenv();
-    final static String mongoserver = env.get("MONGODB_URI") != null ? env.get("MONGODB_URI") : "0.0.0.0";
-    final static String mongoport = env.get("MONBODB_PORT") != null ? env.get("MONBODB_PORT") : "27017";
+
+    // DB URI
+    private final static String localdb = "mongodb://0.0.0.0:27017";
+    final static String mongouri = env.get("MONGODB_URI") != null ? env.get("MONGODB_URI") : localdb;
 
     // Where to store the data
-    final static String dbname = "main-db";
+    final static String dbname = env.get("DB_NAME") != null ? env.get("DB_NAME") : "main-db";
     final static String dbcollection = "paths-to-philosophy";
 }

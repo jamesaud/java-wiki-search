@@ -18,9 +18,11 @@ public final class Wikiscrape {
         Document doc = Jsoup.connect(wikibaseurl + wikiurl).get();
         Elements pElements = doc.select(".mw-parser-output > p");
         String html = "";
+
         for(Element elem: pElements){
             html += elem.html();
         }
+
         String removedParens = html.replaceAll("[(][^)]*[)]", "");
         doc = Jsoup.parse(removedParens);
 
@@ -37,15 +39,10 @@ public final class Wikiscrape {
         return result;
     }
 
-
     static boolean linkIsValid(String link){
         // Because all html in parens were removed, cases have to be taken out like "english_(disambiguation)"
         // Links that contain ":" are to wikipedia Help center
         return link.startsWith(validLinkStart) && !link.endsWith("_") && !link.contains(":");
     }
 
-    public static void main(String[] args) throws IOException{
-        String result = Wikiscrape.searchFirst("/wiki/hello");
-        System.out.println(result);
-    }
 }

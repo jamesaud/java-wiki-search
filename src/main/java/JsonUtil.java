@@ -18,6 +18,7 @@ public class JsonUtil {
     }
 
     public static JSONObject fromJson(String s) throws JSONException{
+        // Turn a string into a JSON object
         JSONObject jsonObj = new JSONObject(s);
         return jsonObj;
     }

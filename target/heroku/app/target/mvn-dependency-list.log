@@ -1,12 +1,14 @@
 
 The following files have been resolved:
    org.eclipse.jetty.websocket:websocket-servlet:jar:9.4.4.v20170414:compile
+   org.mongodb:mongodb-driver-core:jar:3.5.0:compile
    org.eclipse.jetty.websocket:websocket-server:jar:9.4.4.v20170414:compile
    org.eclipse.jetty.websocket:websocket-common:jar:9.4.4.v20170414:compile
    org.eclipse.jetty:jetty-util:jar:9.4.4.v20170414:compile
    org.eclipse.jetty:jetty-client:jar:9.4.4.v20170414:compile
    javax.servlet:javax.servlet-api:jar:3.1.0:compile
    org.eclipse.jetty.websocket:websocket-api:jar:9.4.4.v20170414:compile
+   org.mongodb:mongodb-driver:jar:3.5.0:compile
    org.slf4j:slf4j-api:jar:1.7.13:compile
    org.eclipse.jetty:jetty-http:jar:9.4.4.v20170414:compile
    org.jsoup:jsoup:jar:1.8.3:compile
@@ -14,9 +16,11 @@ The following files have been resolved:
    org.eclipse.jetty:jetty-server:jar:9.4.4.v20170414:compile
    org.eclipse.jetty:jetty-servlet:jar:9.4.4.v20170414:compile
    org.eclipse.jetty.websocket:websocket-client:jar:9.4.4.v20170414:compile
+   org.mongodb:bson:jar:3.5.0:compile
    com.google.code.gson:gson:jar:2.2.4:compile
    com.sparkjava:spark-core:jar:2.6.0:compile
    org.eclipse.jetty:jetty-security:jar:9.4.4.v20170414:compile
+   org.json:json:jar:20090211:compile
    org.eclipse.jetty:jetty-io:jar:9.4.4.v20170414:compile
    org.eclipse.jetty:jetty-webapp:jar:9.4.4.v20170414:compile
 

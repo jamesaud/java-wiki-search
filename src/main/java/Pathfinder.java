@@ -24,19 +24,16 @@ public class Pathfinder {
         String url = "";
         LinkedList<String> path = this.path;
 
-        while (!url.equals(destination)){
+        while (!url.equals(destination) ){
             url = this.traverseNext();
 
-            if (visited.contains(url)){
-                path = null;  // It's a loop
+            if (visited.contains(url) || url == null){
+                path = null;  // It's a loop, or no more links to traverse.
                 break;
             }
             visited.add(url);
         }
-
         return path;
     }
 
-    public static void main(String[] args) throws IOException {
-    }
 }

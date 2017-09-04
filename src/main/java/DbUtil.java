@@ -7,7 +7,8 @@ public final class DbUtil {
     final static String key = "search-term";
 
     static private MongoClient getMongoClient(){
-        return new MongoClient(Config.mongoserver, Integer.parseInt(Config.mongoport));
+        MongoClientURI uri = new MongoClientURI(Config.mongouri);
+        return new MongoClient(uri);
     }
 
     static void insert_in_db(String searchTerm, String path){
