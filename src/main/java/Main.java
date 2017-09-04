@@ -53,7 +53,7 @@ public class Main {
                 } catch (IOException e) {
                     // Trouble connecting to Wikipedia
                     results.put(errorKeyword, "Can't find path, error connecting to Wikipedia. Did you provide a proper term?"
-                            + "https://wikipedia.org/wiki/" + searchTerm + " should exist." + "(" + e.toString() + ")");
+                            + "https://wikipedia.org/wiki/" + searchTerm + " should exist. " + "(" + e.toString() + ")");
                     return JsonUtil.toJson(results);
                 }
 

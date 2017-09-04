@@ -2,35 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="75698ec0-eeba-4e1f-8b7a-6690d0f6f621" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/WiredTiger.wt" afterPath="$PROJECT_DIR$/db/WiredTiger.wt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/_mdb_catalog.wt" afterPath="$PROJECT_DIR$/db/_mdb_catalog.wt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/diagnostic.data/metrics.2017-09-04T03-20-38Z-00000" afterPath="$PROJECT_DIR$/db/diagnostic.data/metrics.2017-09-04T03-20-38Z-00000" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/diagnostic.data/metrics.interim" afterPath="$PROJECT_DIR$/db/diagnostic.data/metrics.interim" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/sizeStorer.wt" afterPath="$PROJECT_DIR$/db/sizeStorer.wt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Config.class" afterPath="$PROJECT_DIR$/target/classes/Config.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/DbUtil.class" afterPath="$PROJECT_DIR$/target/classes/DbUtil.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/JsonUtil.class" afterPath="$PROJECT_DIR$/target/classes/JsonUtil.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Main.class" afterPath="$PROJECT_DIR$/target/classes/Main.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/heroku/app/target/classes/Config.class" afterPath="$PROJECT_DIR$/target/heroku/app/target/classes/Config.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/heroku/app/target/classes/JsonUtil.class" afterPath="$PROJECT_DIR$/target/heroku/app/target/classes/JsonUtil.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/heroku/app/target/classes/Main.class" afterPath="$PROJECT_DIR$/target/heroku/app/target/classes/Main.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/heroku/app/target/classes/Pathfinder.class" afterPath="$PROJECT_DIR$/target/heroku/app/target/classes/Pathfinder.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/heroku/app/target/classes/Wikiscrape.class" afterPath="$PROJECT_DIR$/target/heroku/app/target/classes/Wikiscrape.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/heroku/app/target/spark-bento-app-1.0-SNAPSHOT-jar-with-dependencies.jar" afterPath="$PROJECT_DIR$/target/heroku/app/target/spark-bento-app-1.0-SNAPSHOT-jar-with-dependencies.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/heroku/app/target/spark-bento-app-1.0-SNAPSHOT.jar" afterPath="$PROJECT_DIR$/target/heroku/app/target/spark-bento-app-1.0-SNAPSHOT.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/heroku/slug.tgz" afterPath="$PROJECT_DIR$/target/heroku/slug.tgz" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/spark-bento-app-1.0-SNAPSHOT-jar-with-dependencies.jar" afterPath="$PROJECT_DIR$/target/spark-bento-app-1.0-SNAPSHOT-jar-with-dependencies.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/spark-bento-app-1.0-SNAPSHOT.jar" afterPath="$PROJECT_DIR$/target/spark-bento-app-1.0-SNAPSHOT.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/WiredTiger.turtle" afterPath="$PROJECT_DIR$/db/WiredTiger.turtle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Config.java" afterPath="$PROJECT_DIR$/src/main/java/Config.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/DbUtil.java" afterPath="$PROJECT_DIR$/src/main/java/DbUtil.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/JsonUtil.java" afterPath="$PROJECT_DIR$/src/main/java/JsonUtil.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Main.java" afterPath="$PROJECT_DIR$/src/main/java/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Pathfinder.java" afterPath="$PROJECT_DIR$/src/main/java/Pathfinder.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Wikiscrape.java" afterPath="$PROJECT_DIR$/src/main/java/Wikiscrape.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/heroku/app/pom.xml" afterPath="$PROJECT_DIR$/target/heroku/app/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/heroku/app/target/classes/index.html" afterPath="$PROJECT_DIR$/target/heroku/app/target/classes/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/heroku/app/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/target/heroku/app/target/maven-archiver/pom.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/heroku/app/target/mvn-dependency-list.log" afterPath="$PROJECT_DIR$/target/heroku/app/target/mvn-dependency-list.log" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/mvn-dependency-list.log" afterPath="$PROJECT_DIR$/target/mvn-dependency-list.log" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -67,11 +55,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="16" column="41" lean-forward="false" selection-start-line="16" selection-start-column="41" selection-end-line="16" selection-end-column="41" />
+            <state relative-caret-position="142">
+              <caret line="55" column="91" lean-forward="false" selection-start-line="55" selection-start-column="91" selection-end-line="55" selection-end-column="91" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
                 <element signature="imports" expanded="true" />
@@ -125,11 +113,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Pathfinder.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Pathfinder.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Pathfinder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="16" column="60" lean-forward="false" selection-start-line="16" selection-start-column="60" selection-end-line="16" selection-end-column="60" />
+            <state relative-caret-position="168">
+              <caret line="17" column="26" lean-forward="false" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#261#262#0" expanded="true" />
@@ -193,8 +181,8 @@
         <option value="$PROJECT_DIR$/src/main/java/Config.java" />
         <option value="$PROJECT_DIR$/src/main/java/Wikiscrape.java" />
         <option value="$PROJECT_DIR$/src/main/java/Pathfinder.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/JsonUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Main.java" />
       </list>
     </option>
   </component>
@@ -811,17 +799,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="16" column="41" lean-forward="false" selection-start-line="16" selection-start-column="41" selection-end-line="16" selection-end-column="41" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Config.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -861,12 +838,23 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Pathfinder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="16" column="60" lean-forward="false" selection-start-line="16" selection-start-column="60" selection-end-line="16" selection-end-column="60" />
+        <state relative-caret-position="168">
+          <caret line="17" column="26" lean-forward="false" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#261#262#0" expanded="true" />
             <element signature="e#300#301#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="142">
+          <caret line="55" column="91" lean-forward="false" selection-start-line="55" selection-start-column="91" selection-end-line="55" selection-end-column="91" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
