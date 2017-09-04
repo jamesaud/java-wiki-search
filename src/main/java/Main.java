@@ -1,13 +1,10 @@
 /**
  * Created by jamesaudretsch on 9/1/17.
  */
-import com.mongodb.*;
-import com.mongodb.util.JSON;
 import org.json.JSONException;
-import org.omg.CosNaming.NamingContextExtPackage.StringNameHelper;
+import spark.Spark;
 
 import java.io.IOException;
-import java.lang.reflect.Array;
 import java.util.*;
 
 
@@ -86,8 +83,10 @@ public class Main {
 
     public static void main(String[] args) {
         port(getHerokuAssignedPort());
+        Spark.staticFileLocation("/public");
 
-        get("/", (req, res) -> new RenderUtil().renderContent("index.html"));
+
+        get("/", (req, res) -> new RenderUtil().renderContent("public/index.html"));
 
         get("/path", (req, res) -> {
             String start = req.queryParams("start");
