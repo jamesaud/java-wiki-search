@@ -2,23 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="75698ec0-eeba-4e1f-8b7a-6690d0f6f621" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/index.js" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/index.html" afterPath="$PROJECT_DIR$/src/main/resources/public/index.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/index.js" afterPath="$PROJECT_DIR$/src/main/resources/public/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/diagnostic.data/metrics.2017-09-04T03-20-38Z-00000" afterPath="$PROJECT_DIR$/db/diagnostic.data/metrics.2017-09-04T03-20-38Z-00000" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/diagnostic.data/metrics.interim" afterPath="$PROJECT_DIR$/db/diagnostic.data/metrics.interim" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Main.class" afterPath="$PROJECT_DIR$/target/classes/Main.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/heroku/app/target/classes/Main.class" afterPath="$PROJECT_DIR$/target/heroku/app/target/classes/Main.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/heroku/app/target/spark-bento-app-1.0-SNAPSHOT-jar-with-dependencies.jar" afterPath="$PROJECT_DIR$/target/heroku/app/target/spark-bento-app-1.0-SNAPSHOT-jar-with-dependencies.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/heroku/app/target/spark-bento-app-1.0-SNAPSHOT.jar" afterPath="$PROJECT_DIR$/target/heroku/app/target/spark-bento-app-1.0-SNAPSHOT.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/heroku/slug.tgz" afterPath="$PROJECT_DIR$/target/heroku/slug.tgz" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/spark-bento-app-1.0-SNAPSHOT-jar-with-dependencies.jar" afterPath="$PROJECT_DIR$/target/spark-bento-app-1.0-SNAPSHOT-jar-with-dependencies.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/spark-bento-app-1.0-SNAPSHOT.jar" afterPath="$PROJECT_DIR$/target/spark-bento-app-1.0-SNAPSHOT.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Main.java" afterPath="$PROJECT_DIR$/src/main/java/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/heroku/app/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/target/heroku/app/target/maven-archiver/pom.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -45,11 +29,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="756">
-              <caret line="85" column="41" lean-forward="false" selection-start-line="85" selection-start-column="41" selection-end-line="85" selection-end-column="41" />
+            <state relative-caret-position="-84">
+              <caret line="73" column="0" lean-forward="true" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
                 <element signature="imports" expanded="true" />
@@ -58,11 +42,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/public/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="13" column="28" lean-forward="true" selection-start-line="13" selection-start-column="28" selection-end-line="13" selection-end-column="28" />
+            <state relative-caret-position="120">
+              <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -195,9 +179,9 @@
         <option value="$PROJECT_DIR$/src/main/java/Pathfinder.java" />
         <option value="$PROJECT_DIR$/src/main/java/JsonUtil.java" />
         <option value="$PROJECT_DIR$/src/main/resources/index.html" />
-        <option value="$PROJECT_DIR$/src/main/java/Main.java" />
         <option value="$PROJECT_DIR$/src/main/resources/public/index.html" />
         <option value="$PROJECT_DIR$/src/main/resources/public/index.js" />
+        <option value="$PROJECT_DIR$/src/main/java/Main.java" />
       </list>
     </option>
   </component>
@@ -788,16 +772,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Wikiscrape.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="42" column="50" lean-forward="false" selection-start-line="42" selection-start-column="50" selection-end-line="42" selection-end-column="50" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Pathfinder.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
@@ -818,21 +792,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="756">
-          <caret line="85" column="41" lean-forward="false" selection-start-line="85" selection-start-column="41" selection-end-line="85" selection-end-column="41" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="540">
           <caret line="36" column="21" lean-forward="false" selection-start-line="36" selection-start-column="21" selection-end-line="36" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/public/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -853,6 +824,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/public/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="39" column="75" lean-forward="false" selection-start-line="39" selection-start-column="75" selection-end-line="39" selection-end-column="75" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/JsonUtil.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -864,19 +843,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/public/index.html">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Wikiscrape.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="39" column="75" lean-forward="false" selection-start-line="39" selection-start-column="75" selection-end-line="39" selection-end-column="75" />
-          <folding />
+        <state relative-caret-position="315">
+          <caret line="42" column="50" lean-forward="false" selection-start-line="42" selection-start-column="50" selection-end-line="42" selection-end-column="50" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/public/index.js">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="28" lean-forward="true" selection-start-line="13" selection-start-column="28" selection-end-line="13" selection-end-column="28" />
-          <folding />
+        <state relative-caret-position="-84">
+          <caret line="73" column="0" lean-forward="true" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

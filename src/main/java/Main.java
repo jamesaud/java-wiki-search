@@ -72,7 +72,6 @@ public class Main {
             return response;
     }
 
-
     static int getHerokuAssignedPort() {
         ProcessBuilder processBuilder = new ProcessBuilder();
         if (processBuilder.environment().get("PORT") != null) {

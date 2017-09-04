@@ -27,7 +27,6 @@ $(document).ready( function(){
 
 
     $("#wiki-form").submit(function(e){
-        console.log("Called function");
         e.preventDefault();
         let val = $('#wiki-input').val();
         get_path(val);
